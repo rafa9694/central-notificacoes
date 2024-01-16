@@ -1,0 +1,12 @@
+.nav-item.active {
+  background-color: #dadcdf;
+}
+
+.nav-item:hover {
+  background-color: #c2c6ca;
+}
+
+.sidebar {
+  height: 100%;
+  background-color: #f2f2f3
+}

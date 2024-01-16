@@ -1,0 +1,19 @@
+app-header {
+  height: 7vh;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: Roboto;
+  /* font-size: 1.2em; */
+}
+
+app-footer {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f3;
+}

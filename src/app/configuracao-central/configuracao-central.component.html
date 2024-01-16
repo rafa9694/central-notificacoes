@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <h3 class="titulo">Configurações Cadastradas</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let config of configuracoes; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ config.nome }}</td>
+        <td>{{ config.tipo }}</td>
+        <td>Ações</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="align-self-end">
+    <button class="btn btn-outline-secondary" (click)="abrirModalAdicionar()">Adicionar</button>
+  </div>
+</div>
