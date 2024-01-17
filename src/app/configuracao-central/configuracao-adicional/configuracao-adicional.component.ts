@@ -1,3 +1,4 @@
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,12 +8,13 @@ import { ConfiguracaoCentralService } from '../configuracao-central.service';
 @Component({
   selector: 'app-configuracao-adicional',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './configuracao-adicional.component.html',
   styleUrl: './configuracao-adicional.component.css'
 })
 export class ConfiguracaoAdicionalComponent implements OnInit {
   @Input() config!: ConfiguracaoTable;
+  configAdicionalForm!: FormGroup;
 
   constructor(
     private route: ActivatedRoute,

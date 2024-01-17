@@ -1,17 +1,85 @@
 <div class="conainer-fluid">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 d-flex justify-content-center">
       <h1>Configurar {{ traduzirTipoConfig(config.tipo) }} : {{ config.nome }}</h1>
     </div>
   </div>
-  <form>
-    <fieldset class="row mb-3">
-      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-      <div class="row">
-        <div class="col-12">
-
+  <form [formGroup]="configAdicionalForm">
+    <div class="row my-2">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="nomeSite">Nome do Site:</label>
+          <input type="text" id="nomeSite" formControlName="nomeSite" class="form-control">
         </div>
       </div>
-    </fieldset>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="enderecoSite">Endereço do Site:</label>
+          <input type="text" id="enderecoSite" formControlName="enderecoSite" class="form-control">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="icone">Ícone:</label>
+          <input type="text" id="icone" formControlName="icone" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="row my-2">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="mensagem">Texto da mensagem:</label>
+          <textarea class="form-control" id="mensagem" formControlName="mensagem" style="height: 100px"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row my-2">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="textoPermitir">Texto do botão Permitir:</label>
+          <textarea class="form-control" id="textoPermitir" formControlName="textoPermitir"
+            style="height: 100px"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row my-2">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="textoNegar">Texto do botão Negar:</label>
+          <textarea class="form-control" id="textoNegar" formControlName="textoNegar" style="height: 100px"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row my-2">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="tituloNotificacao">Título da notificação:</label>
+          <input type="text" id="tituloNotificacao" formControlName="tituloNotificacao" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="row my-2">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="mensagemBoasVindas">Texto da mensagem:</label>
+          <textarea class="form-control" id="mensagemBoasVindas" formControlName="mensagemBoasVindas"
+            style="height: 100px"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row my-2">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="habilitarLink">Habilitar / Desabilitar link de destino:</label>
+          <input class="form-check-input" type="checkbox" value="" id="habilitarLink" formControlName="habilitarLink">
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="form-group">
+          <label for="enderecoDestino">Endereço do Destino:</label>
+          <input type="text" id="enderecoDestino" formControlName="enderecoDestino" class="form-control">
+        </div>
+      </div>
+    </div>
   </form>
 </div>

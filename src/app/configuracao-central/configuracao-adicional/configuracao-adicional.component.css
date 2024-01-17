@@ -1,3 +1,9 @@
 .container-fluid {
   height: 100%;
 }
+
+fieldset {
+  /* padding: 10px;
+  border-radius: 25px;
+  border: 1px solid black; */
+}
