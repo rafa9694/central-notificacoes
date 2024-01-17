@@ -12,8 +12,11 @@ import { ConfiguracaoCentralService } from '../configuracao-central.service';
   styleUrl: './modal-configuracao-central.component.css'
 })
 export class ModalConfiguracaoCentralComponent implements OnInit {
-  @Input() titulo = 'Modal';
   configForm!: FormGroup;
+
+  @Input() configEntrada!: ConfiguracaoTable;
+  @Input() editarIndex!: number;
+  @Input() titulo = 'Modal';
 
   constructor(
     public activeModal: NgbActiveModal,
@@ -21,9 +24,16 @@ export class ModalConfiguracaoCentralComponent implements OnInit {
 
   ngOnInit(): void {
     this.configForm = new FormGroup({
-      'nome': new FormControl('', Validators.required),
-      'tipo': new FormControl('', Validators.required)
+      nome: new FormControl('', Validators.required),
+      tipo: new FormControl('', Validators.required)
     });
+    if (this.editarIndex >= 0) {
+      this.configForm.setValue({
+        nome: this.configEntrada.nome,
+        tipo: this.configEntrada.tipo
+      });
+      this.configForm.get('tipo')?.disable();
+    }
   }
 
   salvarMudanca() {
@@ -31,8 +41,11 @@ export class ModalConfiguracaoCentralComponent implements OnInit {
       nome: this.configForm.get('nome')?.value,
       tipo: this.configForm.get('tipo')?.value
     };
-
-    this.configuracaoCentralService.addConfig(config);
-    this.activeModal.dismiss()
+    if (this.editarIndex >= 0) {
+      this.configuracaoCentralService.editarConfig(this.editarIndex, config);
+    } else {
+      this.configuracaoCentralService.adicionarConfig(config);
+    }
+    this.activeModal.dismiss();
   }
 }

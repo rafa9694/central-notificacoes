@@ -13,12 +13,23 @@
       <tr *ngFor="let config of configuracoes; let i = index">
         <th scope="row">{{ i + 1 }}</th>
         <td>{{ config.nome }}</td>
-        <td>{{ config.tipo }}</td>
-        <td>Ações</td>
+        <td>{{ traduzirTipoConfig(config.tipo) }}</td>
+        <td>
+          <button title="Editar" class="btn btn-outline-secondary mx-1" (click)="abrirModalConfig('EDITAR', i, config)">
+            <fa-icon [icon]="editarIcon"></fa-icon>
+          </button>
+          <button title="Excluir" class="btn btn-outline-secondary mx-1" (click)="abrirModalExcluirConfig(i, config)">
+            <fa-icon [icon]="excluirIcon"></fa-icon>
+          </button>
+          <button title="Configuração Adicional" class="btn btn-outline-secondary mx-1"
+            (click)="abrirConfiguracaoAdicional(i)">
+            <fa-icon [icon]="configurarIcon"></fa-icon>
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>
   <div class="align-self-end">
-    <button class="btn btn-outline-secondary" (click)="abrirModalAdicionar()">Adicionar</button>
+    <button class="btn btn-outline-secondary" (click)="abrirModalConfig('ADICIONAR')">Adicionar</button>
   </div>
 </div>
