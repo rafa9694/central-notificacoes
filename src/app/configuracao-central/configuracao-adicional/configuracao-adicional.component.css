@@ -3,7 +3,13 @@
 }
 
 fieldset {
-  /* padding: 10px;
-  border-radius: 25px;
-  border: 1px solid black; */
+  border: 1px solid #bbb9b9;
+  padding: 12px;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 10px;
+  margin: 0 auto;
 }

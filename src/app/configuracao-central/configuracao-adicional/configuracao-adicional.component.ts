@@ -18,9 +18,12 @@ export class ConfiguracaoAdicionalComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private configuracaoCentralService: ConfiguracaoCentralService) { }
+    private configuracaoCentralService: ConfiguracaoCentralService) {
+    this.iniciarForm();
+  }
 
   ngOnInit(): void {
+
     this.route.params.subscribe(params => {
       this.config = this.configuracaoCentralService.getConfig(+params['id']);
     })
@@ -37,5 +40,24 @@ export class ConfiguracaoAdicionalComponent implements OnInit {
       default:
         return '';
     }
+  }
+
+  iniciarForm() {
+    this.configAdicionalForm = new FormGroup({
+      nomeSite: new FormControl(''),
+      enderecoSite: new FormControl(''),
+      icone: new FormControl(''),
+      mensagem: new FormControl(''),
+      textoPermitir: new FormControl(''),
+      textoNegar: new FormControl(''),
+      tituloNotificacao: new FormControl(''),
+      enderecoDestino: new FormControl(''),
+      linkDestino: new FormControl(''),
+      mensagemBoasVindas: new FormControl('')
+    })
+  }
+
+  salvar() {
+    console.log(this.configAdicionalForm.value);
   }
 }
