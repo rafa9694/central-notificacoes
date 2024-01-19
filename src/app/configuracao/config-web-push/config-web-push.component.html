@@ -1,0 +1,101 @@
+<div class="conainer-fluid">
+  <form [formGroup]="configWebPushForm">
+    <fieldset class="mb-2">
+      <legend class="float-none m-0 w-auto">Dados básicos</legend>
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="siteName">Nome do Site:</label>
+            <input type="text" id="siteName" formControlName="siteName" class="form-control">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="siteAddress">Endereço do Site:</label>
+            <input type="text" id="siteAddress" formControlName="siteAddress" class="form-control">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="icon">Ícone:</label>
+            <input type="file" id="icon" formControlName="icon" class="form-control">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="my-2">
+      <legend class="float-none m-0 w-auto">Configuração da notificação de permissão</legend>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="message">Texto da mensagem:</label>
+            <textarea class="form-control" id="message" formControlName="message" rows="2"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="textAllow">Texto do botão Permitir:</label>
+            <textarea class="form-control" id="textAllow" formControlName="textAllow" rows="2"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="textDeny">Texto do botão Negar:</label>
+            <textarea class="form-control" id="textDeny" formControlName="textDeny" rows="2"></textarea>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="my-2">
+      <legend class="float-none m-0 w-auto">Configuração da notificação de boas vindas</legend>
+      <div class="row my-2">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="notificationTitle">Título da notificação:</label>
+            <input type="text" id="notificationTitle" formControlName="notificationTitle" class="form-control">
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="form-group">
+            <label for="destinyAdrdress">Endereço do Destino:</label>
+            <input type="text" id="destinyAdrdress" formControlName="destinyAdrdress" class="form-control">
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-check mt-2">
+            <input class="form-check-input" formControlName="linkDestiny" type="radio" name="linkDestiny"
+              id="allowLinkDestiny" [value]="true">
+            <label class="form-check-label" for="allowLinkDestiny">
+              Habilitar link de destino
+            </label>
+          </div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" formControlName="linkDestiny" type="radio" name="linkDestiny"
+              id="denyLinkDestiny" [value]="false">
+            <label class="form-check-label" for="denyLinkDestiny">
+              Desabilitar link de destino
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row my-2">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="welcomeMessage">Texto da mensagem:</label>
+            <textarea class="form-control" id="welcomeMessage" formControlName="welcomeMessage" rows="2"></textarea>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-end">
+        <button class="btn btn-outline-secondary mx-1" (click)="back()">Voltar</button>
+        <button class="btn btn-outline-primary mx-1" (click)="save()">Salvar</button>
+      </div>
+    </div>
+  </form>
+</div>

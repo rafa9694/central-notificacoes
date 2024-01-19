@@ -1,12 +1,12 @@
 export interface WebPush {
-  enderecoDestino: string;
-  enderecoSite: string;
-  icone: File | null;
-  linkDestino: boolean;
-  mensagem: string;
-  mensagemBoasVindas: string;
-  nomeSite: string;
-  textoNegar: string;
-  textoPermitir: string;
-  tituloNotificacao: string;
+  siteName: string;
+  siteAddress: string;
+  icon: File | null;
+  linkDestiny: boolean;
+  message: string;
+  textAllow: string;
+  textDeny: string;
+  notificationTitle: string;
+  welcomeMessage: string;
+  destinyAdrdress: string;
 }

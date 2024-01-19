@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h4 class="modal-title">{{ titulo }}</h4>
+  <h4 class="modal-title">{{ title }}</h4>
   <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
 </div>
 <div class="modal-body">
@@ -8,15 +8,15 @@
       <div class="col-12">
         <div class="form-group">
           <label for="name">Nome:</label>
-          <input type="text" id="name" formControlName="nome" class="form-control">
+          <input type="text" id="name" formControlName="name" class="form-control">
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
         <div class="form-group">
-          <label for="tipo">Tipo:</label>
-          <select id="tipo" formControlName="tipo" class="form-control">
+          <label for="type">Tipo:</label>
+          <select id="type" formControlName="type" class="form-control">
             <option value="WEB_PUSH">Web Push</option>
             <option value="EMAIL">E-mail</option>
             <option value="SMS">SMS</option>
@@ -28,5 +28,5 @@
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Fechar')">Fechar</button>
-  <button type="button" class="btn btn-primary" (click)="salvarMudanca()">Salvar mudanças</button>
+  <button type="button" class="btn btn-primary" (click)="save()">Salvar mudanças</button>
 </div>

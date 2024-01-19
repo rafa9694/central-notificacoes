@@ -1,27 +1,44 @@
-# CentralNotificacoes
+# Central Notificacoes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+Essa aplicação foi construída com Angular versão 17.0.7. Afim de atender ao teste técnico 'Teste de Fullstack Sistema de notificação de mensagem'.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para rodar a aplicação localmente basta utilizar o comando `ng serve` e navegar para `http://localhost:4200/`.
 
-## Code scaffolding
+## Resultado Teste
+O teste técnico foi dividido nas seguintes as atividades:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Tela de cadastro / login
+- Tela de configuração
+- Tela de setup web push
+- Tela de setup email
+- Tela de setup sms
+- Tela de histórico de notificações
+- Tela de envio manual das notificações
 
-## Build
+No código dessa aplicação foram feito apenas os itens e dados falsos e mokados: 
+- Tela de configuração
+- Tela de setup web push
+- Tela de setup email
+- Tela de setup sms
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tela de configuração
+A Tela de configuração é composta por uma tabela com as aplicações que o usuário cadastrou. Essa tela possui 4 botões de ação.
 
-## Running unit tests
+O Botão Adicionar que fica ao final da tabela permite criar novas aplicações para serem configuradas.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O botão com o ícone de edição presente na linha da tabela permite editar as informações da aplicação cadastrada.
 
-## Running end-to-end tests
+O botão com o ícone de deleção presente na linha da tabela permite a deleção deste registro de aplicação.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+O botão com o ícone de configuração permite ao usuário fazer as configurações adicionais de cada tipo de aplicação.
 
-## Further help
+## Tela de setup web push
+A Tela de setup web push permite preencher os campos referentes às configurações de informações necessárias para o envio de notificações do tipo web push. Sendo necessário apertar o botão Salvar para persistir as alterações.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Tela de setup email
+A Tela de setup email permite preencher os campos referentes às configurações de informações necessárias para o envio de notificações do tipo email. Sendo necessário apertar o botão Salvar para persistir as alterações.
+
+## Tela de setup sms
+A Tela de setup sms permite preencher os campos referentes às configurações de informações necessárias para o envio de notificações do tipo sms. Sendo necessário apertar o botão Salvar para persistir as alterações.

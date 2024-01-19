@@ -11,5 +11,5 @@ import { faGear } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  configurarIcon = faGear;
+  configIcon = faGear;
 }
