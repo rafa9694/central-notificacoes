@@ -1,0 +1,12 @@
+.container-fluid {
+  height: 100%;
+}
+
+router-outlet {
+  height: 100%;
+}
+
+.titulo {
+  margin: 30px;
+  text-align: center;
+}

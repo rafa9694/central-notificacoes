@@ -1,5 +1,4 @@
 <div class="container-fluid">
-  <h3 class="titulo">Configurações Cadastradas</h3>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -22,7 +21,7 @@
             <fa-icon [icon]="excluirIcon"></fa-icon>
           </button>
           <button title="Configuração Adicional" class="btn btn-outline-secondary mx-1"
-            (click)="abrirConfiguracaoAdicional(i)">
+            (click)="abrirConfiguracaoAdicional(i, config)">
             <fa-icon [icon]="configurarIcon"></fa-icon>
           </button>
         </td>

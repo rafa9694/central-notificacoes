@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <form [formGroup]="configSMSForm">
+    <fieldset class="mb-2">
+      <legend class="float-none m-0 w-auto">Dados</legend>
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="provedor">Provedor de SMS integrado:</label>
+            <input type="text" id="provedor" formControlName="provedor" class="form-control">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="login">Login:</label>
+            <input type="text" id="login" formControlName="login" class="form-control">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" formControlName="senha" class="form-control">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-end">
+        <button class="btn btn-outline-secondary mx-1" (click)="voltar()">Voltar</button>
+        <button class="btn btn-outline-primary mx-1" (click)="salvar()">Salvar</button>
+      </div>
+    </div>
+  </form>
+</div>

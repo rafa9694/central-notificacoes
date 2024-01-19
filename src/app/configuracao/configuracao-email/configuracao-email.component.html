@@ -1,0 +1,69 @@
+<div class="conainer-fluid">
+  <form [formGroup]="configEmailForm">
+    <fieldset class="mb-2">
+      <legend class="float-none m-0 w-auto">Dados técnicos</legend>
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="nomeServidor">Nome do Servidor SMTP:</label>
+            <input type="text" id="nomeServidor" formControlName="nomeServidor" class="form-control">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="portalEnvio">Porta de envio:</label>
+            <input type="text" id="portalEnvio" formControlName="portalEnvio" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="login">Login:</label>
+            <input type="text" id="login" formControlName="login" class="form-control">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" formControlName="senha" class="form-control">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="my-2">
+      <legend class="float-none m-0 w-auto">Dados de envio</legend>
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="nomeRemetente">Nome do remetente:</label>
+            <input type="text" id="nomeRemetente" formControlName="nomeRemetente" class="form-control">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="emailRemetente">Email do remetente:</label>
+            <input type="text" id="emailRemetente" formControlName="emailRemetente" class="form-control">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="my-2">
+      <legend class="float-none m-0 w-auto">Submissão de templates</legend>
+      <div class="row my-2">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="template">Template:</label>
+            <input type="file" id="template" formControlName="template" class="form-control">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-end">
+        <button class="btn btn-outline-secondary mx-1" (click)="voltar()">Voltar</button>
+        <button class="btn btn-outline-primary mx-1" (click)="salvar()">Salvar</button>
+      </div>
+    </div>
+  </form>
+</div>

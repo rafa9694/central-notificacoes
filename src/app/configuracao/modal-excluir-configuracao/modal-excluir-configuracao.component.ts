@@ -9,10 +9,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './modal-excluir-configuracao.component.css'
 })
 export class ModalExcluirConfiguracaoComponent {
-
   @Input() titulo = 'Modal';
 
   constructor(public activeModal: NgbActiveModal) {
   }
-
 }

@@ -1,11 +1,6 @@
-<div class="conainer-fluid p-3">
-  <div class="row">
-    <div class="col-12 d-flex justify-content-center">
-      <h2>Configurar {{ traduzirTipoConfig(config.tipo) }} : {{ config.nome }}</h2>
-    </div>
-  </div>
-  <form [formGroup]="configAdicionalForm">
-    <fieldset class="my-2">
+<div class="conainer-fluid">
+  <form [formGroup]="configWebPushForm">
+    <fieldset class="mb-2">
       <legend class="float-none m-0 w-auto">Dados básicos</legend>
       <div class="row">
         <div class="col-4">
@@ -73,14 +68,14 @@
         <div class="col-3">
           <div class="form-check mt-2">
             <input class="form-check-input" formControlName="linkDestino" type="radio" name="linkDestino"
-              id="habilitarLinkDestino">
+              id="habilitarLinkDestino" [value]="true">
             <label class="form-check-label" for="habilitarLinkDestino">
               Habilitar link de destino
             </label>
           </div>
           <div class="form-check mt-2">
             <input class="form-check-input" formControlName="linkDestino" type="radio" name="linkDestino"
-              id="desabilitarLinkDestino" checked>
+              id="desabilitarLinkDestino" [value]="false">
             <label class="form-check-label" for="desabilitarLinkDestino">
               Desabilitar link de destino
             </label>
@@ -99,7 +94,8 @@
     </fieldset>
     <div class="row">
       <div class="col-12 d-flex justify-content-end">
-        <button class="btn btn-outline-secondary" (click)="salvar()">Salvar</button>
+        <button class="btn btn-outline-secondary mx-1" (click)="voltar()">Voltar</button>
+        <button class="btn btn-outline-primary mx-1" (click)="salvar()">Salvar</button>
       </div>
     </div>
   </form>
