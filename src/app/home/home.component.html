@@ -1,8 +1,13 @@
-<p>home works!</p>
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/configuracao" routerLinkActive="active" ariaCurrentWhenActive="page">Config</a>
-    </li>
-  </ul>
-</nav>
+<div class="container-fluid">
+  <nav>
+    <ul>
+      <li>
+        <button routerLink="/configuracao" routerLinkActive="active" ariaCurrentWhenActive="page"
+          class="btn btn-outline-secondary d-flex flex-column justify-content-center align-items-center">
+          <fa-icon [icon]="configurarIcon" size="2x"></fa-icon>
+          Configurar
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
